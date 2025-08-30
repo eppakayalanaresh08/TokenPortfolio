@@ -2,6 +2,9 @@
 
 A modern, responsive cryptocurrency portfolio tracking application built with React, TypeScript, and Tailwind CSS. Track your crypto investments, view portfolio breakdowns, and manage your watchlist with real-time data.
 
+![Homepage](/src/assets/HomeDashboard.png)
+![Mobile](/src/assets/HomeMobile.png)
+
 ## ✨ Features
 
 ### 🎯 Portfolio Management

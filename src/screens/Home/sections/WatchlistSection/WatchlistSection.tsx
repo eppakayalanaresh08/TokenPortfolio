@@ -234,7 +234,7 @@ export const WatchlistSection = (): JSX.Element => {
 
       {/* Watchlist header + actions */}
       <div className="flex flex-col items-start gap-4 relative w-full">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 relative w-full">
+        <div className="flex flex-row items-center gap-3 relative w-full">
           <div className="flex items-center gap-1 relative flex-1">
             <img src={star} alt="star" />
             <div className="relative w-fit mt-[-1.00px] font-headers-webs-h4 font-[number:var(--headers-webs-h4-font-weight)] text-darkforegroundsfg-base text-[length:var(--headers-webs-h4-font-size)] tracking-[var(--headers-webs-h4-letter-spacing)] leading-[var(--headers-webs-h4-line-height)] whitespace-nowrap [font-style:var(--headers-webs-h4-font-style)]">
@@ -242,8 +242,8 @@ export const WatchlistSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Action Buttons - Stack on mobile */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+          {/* Action Buttons - Always horizontal */}
+          <div className="flex flex-row gap-3 w-auto">
             <Button
               onClick={() => {
                 if (!isLoading) {
@@ -251,20 +251,20 @@ export const WatchlistSection = (): JSX.Element => {
                 }
               }}
               disabled={isLoading}
-              className="px-3 py-2 bg-[#ffffff0a] rounded-md shadow-light-buttons-neutral h-auto border-0 hover:bg-[#ffffff15] disabled:opacity-50 w-full sm:w-auto"
+              className="px-3 py-2 bg-[#ffffff0a] rounded-md shadow-light-buttons-neutral h-auto border-0 hover:bg-[#ffffff15] disabled:opacity-50"
             >
               <RefreshCwIcon
                 className={`w-[10px] h-[10px] ${isLoading ? "animate-spin" : ""}`}
                 color="#A1A1AA"
               />
-              <span className="mt-[-1.00px] font-medium text-zinc-100 text-sm [font-family:'Inter',Helvetica] tracking-[0] leading-5 whitespace-nowrap">
+              <span className="mt-[-1.00px] font-medium text-zinc-100 text-sm [font-family:'Inter',Helvetica] tracking-[0] leading-5 hidden sm:inline">
                 Refresh Prices
               </span>
             </Button>
 
             <Button
               onClick={() => setIsAddModalOpen(true)}
-              className="px-3 py-2 bg-[#a9e851] rounded-md shadow-[0px_0px_0px_1px_#1f6619,0px_1px_2px_#1f661966,inset_0px_0.75px_0px_#ffffff33] h-auto border-0 hover:bg-[#98d645] w-full sm:w-auto"
+              className="px-3 py-2 bg-[#a9e851] rounded-md shadow-[0px_0px_0px_1px_#1f6619,0px_1px_2px_#1f661966,inset_0px_0.75px_0px_#ffffff33] h-auto border-0 hover:bg-[#98d645]"
             >
               <PlusIcon className="w-[15px] h-[15px]" color="#000" />
               <span className="mt-[-1.00px] font-medium text-darkforegroundsfg-on-inverted text-sm [font-family:'Inter',Helvetica] tracking-[0] leading-5 whitespace-nowrap">
